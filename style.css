@@ -1,7 +1,5 @@
 :root{--bg:#f4f6f7;--surface:#fff;--ink:#12292e;--muted:#566b70;--deep:#0f3d47;--deep-ink:#f4f6f7;--brass:#b87a2b;--line:#d9e1e3;
 box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
-@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0b1a1e;--surface:#112a30;--ink:#e8eff0;--muted:#9bb0b4;--deep:#0a2a31;--deep-ink:#f4f6f7;--brass:#e0a257;--line:#21424a}}
-:root[data-theme="dark"]{--bg:#0b1a1e;--surface:#112a30;--ink:#e8eff0;--muted:#9bb0b4;--deep:#0a2a31;--deep-ink:#f4f6f7;--brass:#e0a257;--line:#21424a}
 html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
 *,*::before,*::after{box-sizing:border-box}
 body{margin:0;background:var(--bg);color:var(--ink);font-family:"IBM Plex Sans","IBM Plex Sans Arabic",Tahoma,Arial,sans-serif;line-height:1.8;font-size:17px}
@@ -53,6 +51,20 @@ form{display:grid;gap:12px}
 input,textarea{width:100%;padding:12px 14px;border-radius:8px;border:1px solid rgba(255,255,255,.3);background:rgba(255,255,255,.08);color:inherit;font:inherit}
 input::placeholder,textarea::placeholder{color:rgba(244,246,247,.65)}
 footer{padding:24px 0;text-align:center;color:var(--muted);font-size:15px}
+@media(max-width:760px){
+:root{--bg:#fff;--surface:#f4f6f7}
+body{background:#fff;font-size:16px}
+.wrap{padding:0 16px}
+header .wrap{gap:8px;height:60px}
+.brand{font-size:15px;gap:6px}
+.pearl{width:20px;height:20px}
+.acts{gap:6px}
+.acts .btn{padding:8px 12px;font-size:13px;white-space:nowrap}
+.lang{padding:6px 10px;font-size:13px}
+.hero .cta{flex-direction:column}
+.hero .cta .btn,form .btn{display:block;width:100%;text-align:center}
+.it{background:#fff}
+}
 @media(max-width:760px){
 nav{display:none}
 .hero .wrap,.contact .box{grid-template-columns:1fr}
